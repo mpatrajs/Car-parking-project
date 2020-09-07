@@ -37,6 +37,10 @@ container To Visit App:
 
 localhost:7001
 
+container To Visit Admin App:
+ 
+localhost:7007
+
 The build folder is ready to be deployed. You may serve it with a static server: npm install -g serve serve -s build
 
 In Docker Ø Open Windows Power-shell console Ø Move towards GitHub\ipm-project\car-parking Ø From car-parking directory type following command in console: docker-compose up --build -d Ø To make sure that containers are up and running type in command line: docker ps If status is Up you can move towards next step.
@@ -46,8 +50,6 @@ In Docker Ø Open Windows Power-shell console Ø Move towards GitHub\ipm-project
 You should see following web page layout afterwards:
 
 You can get access to the Postgres database using pgAdmin, which runs at port 5555 http://localhost:5555/ User Name: admin@gmail.com Password: password If you don't see the database, than: Ø Click Add New Server Ø Type in all necessary information: General: Name: postgres Connection: Host: car-parking-db Port: 5432 Maintenance database: postgres Username: postgres Password: postgres Ø Press "Save" In Browser -> Database -> Schemas -> Tables you can see postgres tables Virtual machine
-
-GitHub runner automatically downloads all changes from GitHub and pushes them to the Virtual machine. Our frontend can be found here: http://10.125.22.135:7001/ You can access to it only using Cognizant "Associate" network. (Or VPN, but we don't know how to set up it, so welcome to the office!)
 
 pom.xml dependencies Usage: for Ø spring-boot-starter-web
 
